@@ -1,991 +1,811 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Fazaia Schools &amp; Colleges — Aspiring for Excellence</title>
-<meta name="description" content="Fazaia Schools & Colleges — Western Education with Eastern Values. 26 campuses nationwide nurturing critical thinking, character, leadership and academic excellence." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farhan Ali Shah — Graphic Designer & Web Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   FAZAIA SCHOOLS & COLLEGES — Homepage
-   Palette: Navy #0E2344 · Purple #6B2FB3 · Gold #F5B942 · Sky #4AA3FF
-   ============================================================ */
+*{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --navy:#0E2344;--navy-2:#16345f;--purple:#6B2FB3;--purple-deep:#50238a;--purple-soft:#8a52d6;
-  --sky:#4AA3FF;--gold:#F5B942;--ink:#0E2344;--muted:#5a6982;--muted-2:#8a96a9;
-  --paper:#ffffff;--mist:#f4f6fb;--mist-2:#eef1f8;--line:rgba(14,35,68,.10);--line-2:rgba(14,35,68,.06);
-  --shadow-sm:0 2px 10px rgba(14,35,68,.06);--shadow:0 18px 50px -22px rgba(14,35,68,.34);
-  --shadow-lg:0 40px 90px -40px rgba(14,35,68,.55);--radius:18px;--radius-lg:26px;--maxw:1280px;--gutter:clamp(20px,3vw,32px);
-  --ease:cubic-bezier(.22,.61,.36,1);
+  --bg:#fafaf8;--bg2:#f3f2ee;--fg:#111;--fg2:#555;--fg3:#999;
+  --accent:#1a1a6e;--accent2:#4f46e5;--accent3:#7c3aed;--white:#fff;
+  --radius:16px;--trans:.4s cubic-bezier(.4,0,.2,1);
 }
-*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4,.display{font-family:"Outfit",sans-serif;line-height:1.06;margin:0;letter-spacing:-.02em}
-p{margin:0}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
-ul{margin:0;padding:0;list-style:none}button{font-family:inherit;cursor:pointer;border:none;background:none}
-:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
-.wrap{width:100%;max-width:var(--maxw);margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;padding-left:var(--gutter);padding-right:var(--gutter)}
-.eyebrow{font-family:"Outfit",sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--purple);display:inline-flex;align-items:center;gap:.6rem}
-.eyebrow.light{color:var(--gold)}
-.eyebrow::before{content:"";width:34px;height:9px;flex:none;background:linear-gradient(var(--gold),var(--gold)) left 50%/26px 1.5px no-repeat;position:relative}
-.eyebrow .arc{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--gold);display:inline-block;position:relative}
-.eyebrow .arc::after{content:"";position:absolute;inset:2.5px;border-radius:50%;background:var(--gold)}
-.section{padding:118px 0}
-@media(max-width:1100px){.section{padding:96px 0}}
-@media(max-width:768px){.section{padding:74px 0}}
-@media(max-width:520px){.section{padding:58px 0}}
-.section-head{max-width:760px;margin:0 0 56px}
-.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.section-head h2{font-size:clamp(2rem,4.4vw,3.3rem);font-weight:700;margin:.7rem 0 .9rem}
-.section-head p{color:var(--muted);font-size:1.08rem;max-width:62ch}
-.section-head.center p{margin-inline:auto}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--accent2);border-radius:3px}
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:"Outfit",sans-serif;font-weight:600;font-size:1rem;padding:15px 30px;border-radius:60px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s,color .3s;white-space:nowrap;position:relative}
-.btn svg{width:18px;height:18px}
-.btn-primary{background:var(--gold);color:var(--navy);box-shadow:0 16px 34px -16px rgba(245,185,66,.85)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 44px -16px rgba(245,185,66,.95);background:#ffc856}
-.btn-purple{background:var(--purple);color:#fff;box-shadow:0 16px 34px -16px rgba(107,47,179,.7)}
-.btn-purple:hover{transform:translateY(-3px);background:var(--purple-deep)}
-.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
-.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-3px)}
-.btn-ghost-dark{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
-.btn-ghost-dark:hover{border-color:var(--purple);color:var(--purple);transform:translateY(-3px)}
-.btn-sm{padding:11px 22px;font-size:.92rem}
-.link-arrow{font-family:"Outfit",sans-serif;font-weight:600;color:var(--purple);display:inline-flex;align-items:center;gap:.45rem;font-size:.96rem}
-.link-arrow svg{width:16px;height:16px;transition:transform .3s var(--ease)}
-.link-arrow:hover svg{transform:translateX(5px)}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);background:rgba(250,250,248,.88);border-bottom:1px solid rgba(0,0,0,.06);transition:var(--trans)}
+.logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--fg);letter-spacing:-.5px}
+.logo span{color:var(--accent2)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--fg2);font-size:.85rem;font-weight:500;letter-spacing:.3px;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--accent2);transition:width .3s}
+.nav-links a:hover{color:var(--fg)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--accent2);color:var(--white);border:none;padding:10px 22px;border-radius:100px;font-size:.85rem;font-weight:600;cursor:pointer;transition:var(--trans)}
+.nav-cta:hover{background:var(--accent3);transform:translateY(-1px);box-shadow:0 8px 24px rgba(79,70,229,.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--fg);border-radius:2px;transition:var(--trans)}
 
-/* Top bar */
-.topbar{background:var(--navy);color:rgba(255,255,255,.86);font-size:.84rem}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:42px}
-.topbar a:hover{color:var(--gold)}
-.topbar .ti{display:flex;align-items:center;gap:24px}
-.topbar .ti span{display:inline-flex;align-items:center;gap:7px}
-.topbar .ti svg{width:14px;height:14px;color:var(--gold)}
-.topbar .tr{display:flex;align-items:center;gap:18px}
-.topbar .tr .apply{color:var(--gold);font-weight:600;font-family:"Outfit",sans-serif}
-.topbar .socials{display:flex;gap:13px;align-items:center}
-.topbar .socials a{display:grid;place-items:center}
-.topbar .socials svg{width:15px;height:15px}
-@media(max-width:860px){.topbar .ti span.email,.topbar .tr .apply{display:none}}
-@media(max-width:560px){.topbar{display:none}}
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:90px 5% 60px;position:relative;overflow:hidden;gap:40px}
+@media(max-width:900px){#hero{grid-template-columns:1fr}}
+.hero-right{display:flex;justify-content:center;align-items:center;position:relative;z-index:1}
+.hero-photo-card{width:100%;max-width:400px;aspect-ratio:3/4;border-radius:24px;overflow:hidden;position:relative;box-shadow:0 40px 100px rgba(79,70,229,.2);border:1px solid rgba(79,70,229,.15)}
+.hero-photo-card img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.hero-photo-placeholder{width:100%;height:100%;background:linear-gradient(145deg,#e0e0ff 0%,#c7c2ff 50%,#b0a8ff 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.hero-photo-placeholder .big-icon{font-size:7rem}
+.hero-photo-placeholder .ph-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--accent)}
+.hero-photo-placeholder .ph-title{font-size:.8rem;color:var(--accent2);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.hero-badge-ai{position:absolute;top:24px;right:-16px;background:var(--accent2);border-radius:var(--radius);padding:12px 16px;box-shadow:0 12px 40px rgba(79,70,229,.35)}
+.hero-badge-ai .num{font-size:1rem;font-weight:700;color:#fff;line-height:1}
+.hero-badge-ai .lbl{font-size:.65rem;color:rgba(255,255,255,.75);font-weight:500;margin-top:2px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(79,70,229,.09) 0%,transparent 70%)}
+.hero-orb{position:absolute;right:8%;top:20%;width:420px;height:420px;background:radial-gradient(circle,rgba(124,58,237,.12) 0%,transparent 70%);border-radius:50%;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.hero-dots{position:absolute;right:5%;bottom:15%;display:grid;grid-template-columns:repeat(8,1fr);gap:16px;opacity:.2}
+.hero-dots span{width:4px;height:4px;background:var(--accent2);border-radius:50%;display:block}
+.hero-content{max-width:720px;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid rgba(79,70,229,.25);border-radius:100px;padding:7px 18px;font-size:.78rem;font-weight:600;color:var(--accent2);margin-bottom:32px;animation:fadeUp .8s .1s both;letter-spacing:.3px}
+.hero-badge::before{content:'';width:7px;height:7px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+h1.hero-h{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5.5vw,4.8rem);line-height:1.1;font-weight:700;margin-bottom:24px;animation:fadeUp .8s .2s both}
+h1.hero-h em{font-style:italic;color:var(--accent2)}
+.hero-desc{font-size:1.05rem;color:var(--fg2);line-height:1.85;max-width:540px;margin-bottom:40px;animation:fadeUp .8s .3s both}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .8s .4s both}
+.btn-primary{background:var(--accent2);color:var(--white);padding:14px 32px;border-radius:100px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--trans)}
+.btn-primary:hover{background:var(--accent3);transform:translateY(-2px);box-shadow:0 14px 36px rgba(79,70,229,.3)}
+.btn-secondary{background:transparent;color:var(--fg);padding:14px 32px;border-radius:100px;border:2px solid rgba(0,0,0,.14);font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--trans)}
+.btn-secondary:hover{border-color:var(--accent2);color:var(--accent2);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:32px;margin-top:60px;animation:fadeUp .8s .5s both;flex-wrap:nowrap}
+.stat h4{font-size:1.7rem;font-weight:700;color:var(--fg);line-height:1}
+.stat h4 span{color:var(--accent2)}
+.stat p{font-size:.75rem;color:var(--fg3);font-weight:500;letter-spacing:.5px;text-transform:uppercase;margin-top:4px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
-/* Header / nav — roomier, less congested */
-.header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line-2);transition:box-shadow .3s,background .3s}
-.header.scrolled{box-shadow:0 10px 40px -24px rgba(14,35,68,.4);background:rgba(255,255,255,.95)}
-.nav{display:flex;align-items:center;gap:14px;height:84px}
-.brand{display:flex;align-items:center;gap:12px;margin-right:auto;flex:none}
-.brand .mark{width:46px;height:46px;border-radius:12px;flex:none;background:linear-gradient(140deg,var(--purple),var(--navy));display:grid;place-items:center;box-shadow:0 10px 24px -12px rgba(107,47,179,.7);position:relative;overflow:hidden}
-.brand .mark svg{width:25px;height:25px;color:#fff;position:relative;z-index:2}
-.brand .mark::after{content:"";position:absolute;width:60px;height:60px;border:1.5px solid rgba(245,185,66,.45);border-radius:50%;top:-22px;right:-22px}
-.brand .brand-logo{width:46px;height:46px;object-fit:contain;border-radius:10px;display:none}
-.brand .bt{display:flex;flex-direction:column;line-height:1.05;white-space:nowrap}
-.brand .bt b{font-family:"Outfit",sans-serif;font-weight:800;font-size:1.1rem;color:var(--navy);letter-spacing:-.02em}
-.brand .bt small{font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--purple);font-weight:600;white-space:nowrap}
-.menu{display:flex;align-items:center;gap:2px;flex:none}
-.menu > li{position:relative}
-.menu > li > a{font-family:"Outfit",sans-serif;font-weight:500;font-size:.9rem;color:var(--navy);padding:9px 10px;border-radius:10px;display:inline-flex;align-items:center;gap:5px;transition:color .25s,background .25s;position:relative;white-space:nowrap}
-.menu > li > a .chev{width:11px;height:11px;opacity:.55;transition:transform .3s}
-.menu > li:hover > a{color:var(--purple);background:var(--mist)}
-.menu > li:hover > a .chev{transform:rotate(180deg)}
-.dd{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);background:#fff;border-radius:16px;box-shadow:var(--shadow-lg);border:1px solid var(--line-2);min-width:240px;padding:10px;opacity:0;visibility:hidden;transition:.25s var(--ease);z-index:50}
-.menu > li:hover .dd{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.dd a{display:block;padding:11px 15px;border-radius:10px;font-size:.92rem;color:var(--muted);font-weight:500;transition:.2s}
-.dd a:hover{background:var(--mist);color:var(--purple)}
-.dd.mega{min-width:520px;display:grid;grid-template-columns:1fr 1fr;gap:4px;left:0;transform:translateX(-25%) translateY(8px)}
-.menu > li:hover .dd.mega{transform:translateX(-25%) translateY(0)}
-.nav-cta{display:flex;align-items:center;gap:12px;margin-left:6px;flex:none}
-.burger{display:none;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:#fff}
-.burger span{display:block;width:20px;height:2px;background:var(--navy);margin:4px auto;transition:.3s}
-.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-@media(max-width:1300px){.menu{display:none}.burger{display:block}}
-@media(max-width:520px){.nav-cta .btn{display:none}}
+/* SECTIONS */
+section{padding:100px 5%}
+.section-label{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent2);margin-bottom:14px}
+.section-label::before{content:'';width:28px;height:2px;background:var(--accent2);border-radius:2px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.9rem);font-weight:700;line-height:1.2;margin-bottom:14px}
+.section-sub{color:var(--fg2);font-size:.95rem;max-width:500px;line-height:1.75}
 
-/* mobile drawer */
-.drawer{position:fixed;inset:0 0 0 auto;width:min(360px,86vw);background:#fff;z-index:120;transform:translateX(100%);transition:transform .4s var(--ease);box-shadow:var(--shadow-lg);display:flex;flex-direction:column;padding:24px;overflow-y:auto}
-.drawer.open{transform:translateX(0)}
-.scrim{position:fixed;inset:0;background:rgba(14,35,68,.5);z-index:110;opacity:0;visibility:hidden;transition:.35s}
-.scrim.open{opacity:1;visibility:visible}
-.drawer .dclose{align-self:flex-end;font-size:1.6rem;color:var(--navy);line-height:1;padding:6px 10px}
-.drawer nav a{display:block;padding:15px 6px;font-family:"Outfit",sans-serif;font-weight:600;font-size:1.05rem;color:var(--navy);border-bottom:1px solid var(--line-2)}
-.drawer nav a:hover{color:var(--purple)}
-.drawer .dctas{margin-top:22px;display:grid;gap:12px}
+/* ABOUT */
+#about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:center}
+.about-img{position:relative}
+.about-img-inner{width:100%;aspect-ratio:4/5;background:linear-gradient(145deg,#e0e0ff 0%,#c7c2ff 50%,#b8b0ff 100%);border-radius:var(--radius);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.about-tag{position:absolute;bottom:-18px;right:-18px;background:var(--white);border-radius:var(--radius);padding:18px 22px;box-shadow:0 20px 60px rgba(0,0,0,.1)}
+.about-tag .num{font-size:2rem;font-weight:700;color:var(--accent2);line-height:1}
+.about-tag .lbl{font-size:.72rem;color:var(--fg3);font-weight:600;letter-spacing:.5px;margin-top:2px}
+.about-tag2{position:absolute;top:-16px;left:-16px;background:var(--accent2);border-radius:var(--radius);padding:14px 18px;box-shadow:0 12px 40px rgba(79,70,229,.3)}
+.about-tag2 .num{font-size:1.4rem;font-weight:700;color:#fff;line-height:1}
+.about-tag2 .lbl{font-size:.68rem;color:rgba(255,255,255,.75);font-weight:500;margin-top:2px}
+.about-content p{color:var(--fg2);line-height:1.9;margin-bottom:14px;font-size:.95rem}
+.about-values{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.chip{background:var(--white);border:1px solid rgba(0,0,0,.08);border-radius:100px;padding:7px 16px;font-size:.78rem;font-weight:500;color:var(--fg2);transition:var(--trans)}
+.chip:hover{background:var(--accent2);color:var(--white);border-color:var(--accent2);transform:translateY(-2px)}
 
-/* Hero */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:var(--navy);color:#fff;padding:120px 0 0}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s var(--ease);animation:kenburns 14s ease-in-out infinite alternate}
-.hero-slide.active{opacity:1}
-@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.14)}}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,21,42,.93) 0%,rgba(14,35,68,.82) 42%,rgba(14,35,68,.45) 100%),linear-gradient(0deg,rgba(8,21,42,.85),transparent 55%)}
-.hero .wrap{position:relative;z-index:3;width:100%}
-.hero-inner{max-width:780px;padding-bottom:60px}
-.hero h1{font-size:clamp(2.9rem,7vw,5.6rem);font-weight:800;margin:20px 0 22px;letter-spacing:-.03em}
-.hero h1 .hl{color:var(--gold);white-space:nowrap}
-.hero-sub{font-size:clamp(1.05rem,1.8vw,1.3rem);color:rgba(255,255,255,.84);max-width:60ch;margin-bottom:14px}
-.hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:"Outfit",sans-serif;font-weight:600;font-size:1.02rem;color:#fff;background:rgba(107,47,179,.34);border:1px solid rgba(138,82,214,.5);padding:9px 18px;border-radius:50px;margin-bottom:34px;backdrop-filter:blur(6px)}
-.hero-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
-.hero .eyebrow{color:var(--gold)}
-.hero-arc{position:absolute;right:-60px;top:8%;width:560px;height:560px;z-index:2;opacity:.5;pointer-events:none}
-@media(max-width:980px){.hero-arc{display:none}}
-.trust{position:relative;z-index:3;background:rgba(8,21,42,.5);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.12)}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-top:26px;padding-bottom:26px}
-.trust .ti{text-align:center;position:relative}
-.trust .ti:not(:last-child)::after{content:"";position:absolute;right:0;top:18%;height:64%;width:1px;background:rgba(255,255,255,.14)}
-.trust .num{font-family:"Outfit",sans-serif;font-weight:800;font-size:clamp(1.8rem,3.4vw,2.7rem);color:#fff;letter-spacing:-.02em}
-.trust .num .plus{color:var(--gold)}
-.trust .lbl{font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-top:4px}
-@media(max-width:680px){.trust .wrap{grid-template-columns:1fr 1fr;gap:24px 10px}.trust .ti:nth-child(2)::after{display:none}}
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;margin-top:52px}
+.skill-card{background:var(--white);border-radius:var(--radius);padding:28px;border:1px solid rgba(0,0,0,.06);transition:var(--trans)}
+.skill-card:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.08)}
+.skill-icon{font-size:1.8rem;margin-bottom:14px}
+.skill-card h4{font-size:1rem;font-weight:600;margin-bottom:18px}
+.skill-bar{background:var(--bg2);border-radius:100px;height:5px;overflow:hidden;margin-bottom:7px}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent) 0%,var(--accent2) 60%,var(--accent3) 100%);border-radius:100px;transition:width 1.3s cubic-bezier(.4,0,.2,1);width:0%}
+.skill-meta{display:flex;justify-content:space-between;font-size:.75rem;color:var(--fg3)}
 
-/* reveal */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+/* SERVICES */
+#services{background:var(--bg2)}
+.services-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;flex-wrap:wrap;gap:24px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:36px 30px;border:1px solid rgba(0,0,0,.06);position:relative;overflow:hidden;transition:var(--trans);cursor:default}
+.service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));opacity:0;transition:var(--trans)}
+.service-card:hover::before{opacity:1}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 32px 80px rgba(79,70,229,.25)}
+.service-card *{position:relative;z-index:1;transition:color .3s}
+.service-card:hover h3,.service-card:hover p,.service-card:hover .service-num{color:var(--white)}
+.service-num{font-size:.7rem;font-weight:700;letter-spacing:2px;color:var(--accent2);margin-bottom:18px;display:block}
+.service-icon{font-size:2.2rem;margin-bottom:18px;display:block}
+.service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:10px}
+.service-card p{color:var(--fg2);line-height:1.7;font-size:.875rem}
+.service-ai-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(124,58,237,.1);border-radius:100px;padding:3px 10px;font-size:.68rem;font-weight:600;color:var(--accent3);margin-top:12px;letter-spacing:.5px}
+.service-card:hover .service-ai-badge{background:rgba(255,255,255,.2);color:#fff}
 
-/* Why Fazaia */
-.why{background:var(--mist)}
-.why-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
-.collage{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.collage figure{margin:0;height:190px;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;box-shadow:var(--shadow)}
-.collage .badge{grid-column:1/-1;background:var(--navy);color:#fff;border-radius:18px;display:flex;align-items:center;gap:16px;padding:22px;box-shadow:var(--shadow)}
-.collage .badge .n{font-family:"Outfit",sans-serif;font-weight:800;font-size:2.3rem;color:var(--gold);line-height:1}
-.collage .badge p{font-size:.9rem;color:rgba(255,255,255,.8)}
-.why-quote{font-family:"Outfit",sans-serif;font-weight:500;font-size:1.22rem;color:var(--navy);line-height:1.45;margin:6px 0 30px;border-left:3px solid var(--gold);padding-left:20px}
-.pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.pillar{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line-2);padding:18px;border-radius:16px;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
-.pillar:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
-.pillar .pic{width:42px;height:42px;border-radius:12px;flex:none;display:grid;place-items:center;background:linear-gradient(140deg,rgba(107,47,179,.14),rgba(74,163,255,.14));color:var(--purple)}
-.pillar .pic svg{width:22px;height:22px}
-.pillar h4{font-size:1rem;font-weight:700;margin-bottom:3px;color:var(--navy)}
-.pillar p{font-size:.84rem;color:var(--muted);line-height:1.4}
-@media(max-width:900px){.why-grid{grid-template-columns:1fr;gap:40px}}
-@media(max-width:480px){.pillars{grid-template-columns:1fr}.collage figure{height:160px}}
+/* TOOLS */
+#tools{background:var(--bg)}
+.tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px}
+.tool-card{background:var(--white);border-radius:var(--radius);padding:30px 20px;border:1px solid rgba(0,0,0,.06);text-align:center;transition:var(--trans);position:relative;overflow:hidden}
+.tool-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));opacity:0;transition:var(--trans)}
+.tool-card:hover::before{opacity:1}
+.tool-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 24px 60px rgba(79,70,229,.22);border-color:transparent}
+.tool-card *{position:relative;z-index:1;transition:color .3s}
+.tool-icon-wrap{width:56px;height:56px;background:var(--bg2);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:var(--trans)}
+.tool-card:hover .tool-icon-wrap{background:rgba(255,255,255,.18)}
+.tool-icon{font-size:1.8rem;display:block}
+.tool-card h4{font-size:.88rem;font-weight:700;color:var(--fg);margin-bottom:4px}
+.tool-card:hover h4{color:#fff}
+.tool-card span{font-size:.72rem;color:var(--fg3);display:block;letter-spacing:.3px}
+.tool-card:hover span{color:rgba(255,255,255,.8)}
+@media(max-width:900px){.tools-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.tools-grid{grid-template-columns:repeat(2,1fr)}}
 
-/* Mission Vision Values */
-.mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.mvv{position:relative;border-radius:var(--radius-lg);padding:38px 32px 34px;overflow:hidden;min-height:300px;display:flex;flex-direction:column;color:#fff;transition:transform .4s var(--ease),box-shadow .4s}
-.mvv:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
-.mvv.m1{background:linear-gradient(155deg,var(--purple),var(--purple-deep))}
-.mvv.m2{background:linear-gradient(155deg,var(--navy-2),var(--navy))}
-.mvv.m3{background:linear-gradient(155deg,#1c4a86,var(--navy-2))}
-.mvv .ic{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);margin-bottom:20px;transition:transform .4s var(--ease)}
-.mvv:hover .ic{transform:scale(1.08) rotate(-4deg)}
-.mvv .ic svg{width:27px;height:27px;color:var(--gold)}
-.mvv .tag{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;font-family:"Outfit",sans-serif}
-.mvv h3{font-size:1.5rem;font-weight:700;margin:6px 0 12px}
-.mvv p{font-size:.97rem;color:rgba(255,255,255,.82);line-height:1.5}
-.mvv .vals{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.mvv .vals span{font-size:.82rem;font-weight:600;font-family:"Outfit",sans-serif;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:6px 13px;border-radius:30px}
-.mvv .glow{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(245,185,66,.4),transparent 70%);bottom:-90px;right:-60px;opacity:.6;transition:transform .5s var(--ease)}
-.mvv:hover .glow{transform:scale(1.3)}
-@media(max-width:860px){.mvv-grid{grid-template-columns:1fr;gap:18px}.mvv{min-height:auto}}
+/* PROJECTS */
+.projects-filter{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0 32px}
+.filter-btn{background:transparent;border:1.5px solid rgba(0,0,0,.12);border-radius:100px;padding:8px 20px;font-size:.82rem;font-weight:500;cursor:pointer;transition:var(--trans);color:var(--fg2)}
+.filter-btn:hover,.filter-btn.active{background:var(--accent2);color:var(--white);border-color:var(--accent2)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px}
+.project-card{background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(0,0,0,.06);transition:var(--trans)}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(0,0,0,.1)}
+.project-thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-size:3.2rem;position:relative;overflow:hidden}
+.project-thumb::after{content:'View Project →';position:absolute;inset:0;background:rgba(26,26,110,.88);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:600;opacity:0;transition:var(--trans)}
+.project-card:hover .project-thumb::after{opacity:1}
+.project-info{padding:22px}
+.project-tag{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent2);margin-bottom:7px}
+.project-info h3{font-size:1.05rem;font-weight:700;margin-bottom:7px}
+.project-info p{font-size:.85rem;color:var(--fg2);line-height:1.6}
+.project-tech{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.tech-pill{background:var(--bg2);border-radius:100px;padding:3px 11px;font-size:.7rem;font-weight:500;color:var(--fg3)}
 
-/* Academic journey */
-.journey{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.journey .section-head h2{color:#fff}.journey .section-head p{color:rgba(255,255,255,.72)}.journey .eyebrow{color:var(--gold)}
-.path{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
-.path::before{content:"";position:absolute;top:30px;left:6%;right:6%;height:2px;background:repeating-linear-gradient(90deg,rgba(245,185,66,.5) 0 16px,transparent 16px 28px);z-index:0}
-.stage{position:relative;z-index:1}
-.stage .node{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;margin-bottom:22px;background:linear-gradient(150deg,var(--purple),var(--purple-deep));box-shadow:0 14px 30px -14px rgba(107,47,179,.9);position:relative}
-.stage .node b{font-family:"Outfit",sans-serif;font-weight:800;font-size:1.3rem;color:#fff}
-.stage .node::after{content:"";position:absolute;inset:-5px;border:1.5px solid rgba(245,185,66,.4);border-radius:20px}
-.stage-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;transition:transform .4s var(--ease),background .4s,border-color .4s}
-.stage-card:hover{transform:translateY(-7px);background:rgba(255,255,255,.08);border-color:rgba(245,185,66,.4)}
-.stage-card .img{height:148px;background-size:cover;background-position:center;position:relative}
-.stage-card .img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,35,68,.7),transparent 60%)}
-.stage-card .body{padding:22px 22px 24px}
-.stage-card h3{font-size:1.18rem;font-weight:700;margin-bottom:8px}
-.stage-card p{font-size:.88rem;color:rgba(255,255,255,.74);margin-bottom:16px;line-height:1.5}
-.stage-card .link-arrow{color:var(--gold)}
-@media(max-width:960px){.path{grid-template-columns:1fr 1fr;gap:26px}.path::before{display:none}}
-@media(max-width:560px){.path{grid-template-columns:1fr}}
-
-/* Student life — symmetric uniform grid */
-.life-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.life{position:relative;height:240px;border-radius:20px;overflow:hidden;background-size:cover;background-position:center;display:flex;align-items:flex-end;color:#fff;box-shadow:var(--shadow)}
-.life::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,35,68,.92),rgba(14,35,68,.18) 60%,rgba(14,35,68,.05));transition:background .4s}
-.life:hover::after{background:linear-gradient(0deg,rgba(107,47,179,.86),rgba(14,35,68,.2) 70%)}
-.life .lc{position:relative;z-index:2;padding:20px;transform:translateY(8px);transition:transform .4s var(--ease)}
-.life:hover .lc{transform:translateY(0)}
-.life .lic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);margin-bottom:11px}
-.life .lic svg{width:20px;height:20px;color:var(--gold)}
-.life h4{font-size:1.05rem;font-weight:700}
-.life p{font-size:.82rem;color:rgba(255,255,255,.8);max-height:0;opacity:0;overflow:hidden;transition:.4s var(--ease)}
-.life:hover p{max-height:60px;opacity:1;margin-top:6px}
-@media(max-width:960px){.life-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.life{height:200px}}
-
-/* Story / parallax */
-.story{position:relative;color:#fff;overflow:hidden;padding:0}
-.story-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-attachment:fixed;z-index:0}
-.story-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,21,42,.95) 0%,rgba(14,35,68,.78) 50%,rgba(80,35,138,.55) 100%)}
-.story .wrap{position:relative;z-index:2;padding-block:130px}
-.story-inner{max-width:680px}
-.story h2{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:700;margin:18px 0 20px}
-.story p{font-size:1.12rem;color:rgba(255,255,255,.85);margin-bottom:30px;max-width:58ch}
-.play{display:inline-flex;align-items:center;gap:16px;color:#fff;background:none}
-.play .pbtn{width:68px;height:68px;border-radius:50%;background:var(--gold);display:grid;place-items:center;position:relative;transition:transform .3s var(--ease)}
-.play:hover .pbtn{transform:scale(1.08)}
-.play .pbtn svg{width:24px;height:24px;color:var(--navy);margin-left:3px}
-.play .pbtn::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(245,185,66,.6);animation:pulse 2.4s ease-out infinite}
-@keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
-.play .pt{text-align:left}
-.play .pt b{font-family:"Outfit",sans-serif;font-weight:600;display:block}
-.play .pt small{color:rgba(255,255,255,.7)}
-@media(max-width:768px){.story-bg{background-attachment:scroll}}
-
-/* Video modal */
-.vmodal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(8,21,42,.9);backdrop-filter:blur(8px)}
-.vmodal.open{display:flex}
-.vbox{width:min(960px,100%);aspect-ratio:16/9;background:#05101f;border-radius:18px;overflow:hidden;position:relative;box-shadow:var(--shadow-lg)}
-.vbox iframe,.vbox video{width:100%;height:100%;border:0;display:block}
-.vempty{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:6px;color:rgba(255,255,255,.75);font-family:"Outfit",sans-serif;padding:24px}
-.vempty b{color:#fff;font-size:1.1rem}
-.vclose{position:absolute;top:-46px;right:0;color:#fff;font-size:2rem;line-height:1;background:none;padding:6px}
-@media(max-width:520px){.vclose{top:auto;bottom:-46px}}
-
-/* Accreditations — flexible, fits 7 logos */
-.accred{background:var(--mist)}
-.logo-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
-.logo-card{background:#fff;border:1px solid var(--line-2);border-radius:16px;height:108px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:14px;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
-.logo-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
-.logo-card .lm{font-family:"Outfit",sans-serif;font-weight:800;font-size:1.45rem;color:var(--navy);letter-spacing:-.02em}
-.logo-card .lm .ac{color:var(--purple)}
-.logo-card small{font-size:.72rem;color:var(--muted-2);letter-spacing:.04em;line-height:1.2}
-
-/* Campus network */
-.network-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.net-figure{position:relative;border-radius:26px;overflow:hidden;min-height:430px;background:linear-gradient(160deg,var(--navy),#08152a);box-shadow:var(--shadow-lg)}
-.net-figure img{width:100%;height:100%;min-height:430px;object-fit:cover;display:none}
-.net-figure .net-placeholder{position:absolute;inset:0;display:grid;place-content:center;gap:10px;text-align:center;color:rgba(255,255,255,.7);padding:30px;font-family:"Outfit",sans-serif}
-.net-figure .net-placeholder svg{width:46px;height:46px;color:var(--gold);margin:0 auto}
-.net-figure .net-placeholder b{color:#fff;font-size:1.15rem}
-.net-figure .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:38px 38px;opacity:.5}
-.region-chips{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
-.rchip{display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:transform .3s var(--ease),box-shadow .3s}
-.rchip:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.rchip .rn{font-family:"Outfit",sans-serif;font-weight:600;color:var(--navy)}
-.rchip .rc{font-family:"Outfit",sans-serif;font-weight:800;font-size:1.5rem;color:var(--purple)}
-.net-total{display:flex;align-items:center;gap:14px;background:var(--navy);color:#fff;border-radius:16px;padding:18px 22px;margin-bottom:22px}
-.net-total .nt{font-family:"Outfit",sans-serif;font-weight:800;font-size:2.4rem;color:var(--gold);line-height:1}
-.net-total p{font-size:.92rem;color:rgba(255,255,255,.82)}
-@media(max-width:900px){.network-grid{grid-template-columns:1fr;gap:36px}.net-figure,.net-figure img{min-height:320px}}
-
-/* Testimonials — auto marquee right→left */
-.testi{background:var(--mist-2)}
-.testi-marquee{overflow:hidden;position:relative;padding:8px 0 16px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
-.testi-track{display:flex;gap:24px;width:max-content;animation:scrollLeft 75s linear infinite}
-.testi-marquee:hover .testi-track,.testi-marquee:focus-within .testi-track{animation-play-state:paused}
+/* TESTIMONIALS - MARQUEE SLIDESHOW */
+#testimonials{background:var(--bg2);overflow:hidden}
+.testi-marquee-wrap{position:relative;margin-top:52px;overflow:hidden}
+.testi-marquee-wrap::before,.testi-marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.testi-marquee-wrap::before{left:0;background:linear-gradient(to right,var(--bg2),transparent)}
+.testi-marquee-wrap::after{right:0;background:linear-gradient(to left,var(--bg2),transparent)}
+.testi-track{display:flex;gap:22px;width:max-content;animation:scrollLeft 38s linear infinite}
+.testi-track:hover{animation-play-state:paused}
 @keyframes scrollLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.tcard{flex:0 0 360px;background:#fff;border-radius:22px;padding:30px;box-shadow:var(--shadow-sm);border:1px solid var(--line-2);display:flex;flex-direction:column}
-.tcard .quote{font-size:2.4rem;color:var(--gold);font-family:"Outfit",sans-serif;font-weight:800;line-height:.6;height:24px}
-.tcard p{font-size:1rem;color:var(--navy);line-height:1.55;margin:14px 0 22px;flex:1}
-.tcard .who{display:flex;align-items:center;gap:13px}
-.tcard .who .av{width:50px;height:50px;border-radius:50%;background-size:cover;background-position:center;flex:none;background-color:var(--mist-2)}
-.tcard .who b{font-family:"Outfit",sans-serif;font-weight:700;font-size:.96rem;color:var(--navy);display:block}
-.tcard .who small{font-size:.82rem;color:var(--purple);font-weight:600}
-.testi-hint{text-align:center;margin-top:18px;font-size:.84rem;color:var(--muted-2)}
-@media(max-width:480px){.tcard{flex-basis:290px}}
+.testi-card{background:var(--white);border-radius:var(--radius);padding:32px;border:1px solid rgba(0,0,0,.06);transition:var(--trans);width:360px;flex-shrink:0}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.08)}
+.stars{color:#f59e0b;font-size:1rem;letter-spacing:2px;margin-bottom:16px}
+.testi-card blockquote{font-size:.9rem;color:var(--fg2);line-height:1.85;font-style:italic;margin-bottom:22px}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#e8e6ff,#d4d1ff);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+.testi-author h5{font-size:.88rem;font-weight:600}
+.testi-author span{font-size:.75rem;color:var(--fg3)}
 
-/* News */
-.news-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:26px}
-.news-side{display:grid;gap:18px;grid-template-rows:1fr 1fr 1fr}
-.feature{position:relative;border-radius:24px;overflow:hidden;min-height:460px;display:flex;align-items:flex-end;color:#fff;background-size:cover;background-position:center;box-shadow:var(--shadow)}
-.feature::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,21,42,.94),rgba(14,35,68,.1) 65%)}
-.feature .fc{position:relative;z-index:2;padding:36px}
-.feature .cat{display:inline-block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy);background:var(--gold);padding:5px 13px;border-radius:30px;margin-bottom:14px;font-family:"Outfit",sans-serif}
-.feature h3{font-size:1.7rem;font-weight:700;margin-bottom:10px;max-width:80%}
-.feature p{color:rgba(255,255,255,.8);font-size:.96rem;max-width:78%}
-.ncard{background:#fff;border:1px solid var(--line-2);border-radius:18px;overflow:hidden;display:flex;transition:transform .35s var(--ease),box-shadow .35s}
-.ncard:hover{transform:translateX(5px);box-shadow:var(--shadow)}
-.ncard .ni{width:140px;flex:none;background-size:cover;background-position:center}
-.ncard .nb{padding:18px 20px;display:flex;flex-direction:column;justify-content:center}
-.ncard .cat{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--purple);font-family:"Outfit",sans-serif}
-.ncard h4{font-size:1.04rem;font-weight:700;color:var(--navy);margin:6px 0;line-height:1.3}
-.ncard small{font-size:.8rem;color:var(--muted-2)}
-@media(max-width:840px){.news-grid{grid-template-columns:1fr}.feature{min-height:340px}.news-side{grid-template-rows:none}}
-@media(max-width:420px){.ncard{flex-direction:column}.ncard .ni{width:100%;height:150px}}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start;margin-top:52px}
+.contact-info h3{font-size:1.4rem;font-weight:700;margin-bottom:14px}
+.contact-info p{color:var(--fg2);line-height:1.8;margin-bottom:32px;font-size:.9rem}
+.contact-item{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.contact-item-icon{width:42px;height:42px;background:var(--bg2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.contact-item-text h5{font-size:.83rem;font-weight:600;margin-bottom:2px}
+.contact-item-text span{font-size:.78rem;color:var(--fg3)}
+.contact-form{background:var(--white);border-radius:var(--radius);padding:38px;border:1px solid rgba(0,0,0,.06)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.75rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--fg2);margin-bottom:7px}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:var(--bg);border:1.5px solid rgba(0,0,0,.1);border-radius:10px;padding:11px 15px;font-size:.88rem;font-family:inherit;color:var(--fg);transition:var(--trans);outline:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent2);box-shadow:0 0 0 4px rgba(79,70,229,.1)}
+.form-group textarea{min-height:115px;resize:vertical}
+.form-submit{width:100%;background:var(--accent2);color:var(--white);border:none;border-radius:100px;padding:14px;font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--trans);margin-top:6px}
+.form-submit:hover{background:var(--accent3);transform:translateY(-2px);box-shadow:0 12px 32px rgba(79,70,229,.3)}
 
-/* Co-curricular */
-.cocur{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.cocur .section-head h2{color:#fff}.cocur .section-head p{color:rgba(255,255,255,.72)}.cocur .eyebrow{color:var(--gold)}
-.cocur-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.cc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:26px 22px;transition:transform .35s var(--ease),background .35s,border-color .35s}
-.cc:hover{transform:translateY(-7px);background:linear-gradient(155deg,rgba(107,47,179,.5),rgba(107,47,179,.18));border-color:rgba(245,185,66,.4)}
-.cc .ci{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:rgba(245,185,66,.14);border:1px solid rgba(245,185,66,.3);margin-bottom:16px}
-.cc .ci svg{width:25px;height:25px;color:var(--gold)}
-.cc h4{font-size:1.08rem;font-weight:700;margin-bottom:6px}
-.cc p{font-size:.85rem;color:rgba(255,255,255,.72);line-height:1.45}
-@media(max-width:880px){.cocur-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:460px){.cocur-grid{grid-template-columns:1fr}}
+/* FOOTER */
+footer{background:var(--fg);color:var(--white);padding:60px 5% 30px}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;flex-wrap:wrap;gap:32px}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:10px}
+.footer-logo span{color:var(--accent2)}
+.footer-desc{color:rgba(255,255,255,.45);font-size:.85rem;line-height:1.75;max-width:270px}
+.footer-links h4{font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px}
+.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{text-decoration:none;color:rgba(255,255,255,.65);font-size:.85rem;transition:color .3s}
+.footer-links a:hover{color:var(--white)}
+.social-links{display:flex;gap:10px;margin-top:22px}
+.social-link{width:38px;height:38px;background:rgba(255,255,255,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(255,255,255,.65);font-size:.9rem;font-weight:600;transition:var(--trans)}
+.social-link:hover{background:var(--accent2);color:var(--white);transform:translateY(-2px)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:rgba(255,255,255,.3);font-size:.78rem}
 
-/* Admissions CTA */
-.adm{position:relative;color:#fff;overflow:hidden}
-.adm-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
-.adm-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(80,35,138,.95) 0%,rgba(14,35,68,.9) 55%,rgba(14,35,68,.55) 100%)}
-.adm .wrap{position:relative;z-index:2;padding-block:120px;text-align:center}
-.adm .badge2{display:inline-flex;align-items:center;gap:9px;background:rgba(245,185,66,.18);border:1px solid rgba(245,185,66,.5);color:var(--gold);font-weight:600;font-family:"Outfit",sans-serif;padding:8px 18px;border-radius:40px;font-size:.92rem;margin-bottom:22px}
-.adm h2{font-size:clamp(2.2rem,5vw,3.7rem);font-weight:800;margin-bottom:16px;max-width:16ch;margin-inline:auto}
-.adm p{font-size:1.15rem;color:rgba(255,255,255,.85);margin-bottom:34px}
-.adm .ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-
-/* Alumni */
-.alumni .ia-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
-.impact-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.istat{border:1px solid var(--line-2);border-radius:18px;padding:26px;background:var(--mist);transition:transform .35s var(--ease),box-shadow .35s}
-.istat:hover{transform:translateY(-5px);box-shadow:var(--shadow);background:#fff}
-.istat .n{font-family:"Outfit",sans-serif;font-weight:800;font-size:2.4rem;color:var(--navy)}
-.istat .n .plus{color:var(--gold)}
-.istat .l{font-size:.92rem;color:var(--muted);font-weight:500;margin-top:2px}
-.fields{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.fields span{display:inline-flex;align-items:center;gap:8px;font-family:"Outfit",sans-serif;font-weight:600;font-size:.9rem;color:var(--navy);background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:40px}
-.fields span svg{width:16px;height:16px;color:var(--purple)}
-@media(max-width:900px){.alumni .ia-grid{grid-template-columns:1fr;gap:40px}}
-
-/* Final CTA */
-.final{background:linear-gradient(160deg,var(--purple) 0%,var(--purple-deep) 40%,var(--navy) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
-.final::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;border:1.5px solid rgba(245,185,66,.18);top:-260px;left:50%;transform:translateX(-50%)}
-.final::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:1.5px solid rgba(245,185,66,.12);bottom:-180px;right:-80px}
-.final .wrap{position:relative;z-index:2;padding-block:120px}
-.final h2{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800;letter-spacing:-.03em;margin-bottom:18px}
-.final h2 .g{color:var(--gold)}
-.final p{font-size:1.18rem;color:rgba(255,255,255,.85);max-width:54ch;margin:0 auto 34px}
-.final .ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-
-/* Footer */
-.footer{background:var(--navy);color:rgba(255,255,255,.7);padding:78px 0 0}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.4fr;gap:40px;padding-bottom:54px;border-bottom:1px solid rgba(255,255,255,.1)}
-.foot-brand .brand .bt b{color:#fff}
-.foot-about{font-size:.9rem;line-height:1.6;margin:18px 0 20px;max-width:34ch}
-.foot-social{display:flex;gap:11px}
-.foot-social a{width:38px;height:38px;border-radius:11px;border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;transition:.25s}
-.foot-social a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
-.foot-social svg{width:16px;height:16px}
-.fcol h5{font-family:"Outfit",sans-serif;font-weight:700;color:#fff;font-size:.96rem;margin-bottom:18px;letter-spacing:.02em}
-.fcol a{display:block;font-size:.88rem;padding:6px 0;transition:.2s}
-.fcol a:hover{color:var(--gold);padding-left:5px}
-.fcol .ci{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;margin-bottom:12px}
-.fcol .ci svg{width:16px;height:16px;color:var(--gold);flex:none;margin-top:3px}
-.news-form{display:flex;gap:8px;margin-top:14px}
-.news-form input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 14px;color:#fff;font-family:inherit;font-size:.88rem}
-.news-form input::placeholder{color:rgba(255,255,255,.5)}
-.news-form button{background:var(--gold);color:var(--navy);border-radius:12px;padding:0 18px;font-weight:700;font-family:"Outfit",sans-serif;transition:.25s}
-.news-form button:hover{background:#ffc856}
-.foot-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 0;font-size:.84rem;flex-wrap:wrap}
-.foot-bottom a:hover{color:var(--gold)}
-@media(max-width:1000px){.foot-grid{grid-template-columns:1fr 1fr 1fr;gap:34px}.foot-brand{grid-column:span 3}.fcol.news-col{grid-column:span 3}}
-@media(max-width:600px){.foot-grid{grid-template-columns:1fr 1fr}.foot-brand,.fcol.news-col{grid-column:span 2}}
-
-/* sticky mobile CTA + back to top */
-.mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:80;display:none;gap:10px;padding:12px 16px;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -20px rgba(14,35,68,.4)}
-.mobile-cta .btn{flex:1;padding:13px}
-@media(max-width:680px){.mobile-cta{display:flex}body{padding-bottom:74px}}
-.totop{position:fixed;right:22px;bottom:22px;z-index:85;width:50px;height:50px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(12px);transition:.3s var(--ease)}
-.totop.show{opacity:1;visibility:visible;transform:none}
-.totop:hover{background:var(--purple);transform:translateY(-3px)}
-.totop svg{width:22px;height:22px}
-@media(max-width:680px){.totop{bottom:86px}}
-
-@media(max-width:768px){.story .wrap,.adm .wrap,.final .wrap{padding-block:84px}.hero{padding-top:96px}}
-@media(max-width:520px){.story .wrap,.adm .wrap,.final .wrap{padding-block:64px}}
-@media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition-duration:.01ms!important}
-  .reveal{opacity:1;transform:none}
-  .testi-track{animation:none!important}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-img{max-width:360px;margin:0 auto}
+  .about-tag{right:0}
+  .about-tag2{left:0}
+  .form-row{grid-template-columns:1fr}
+  .hero-dots,.hero-orb{display:none}
+  .services-intro{flex-direction:column}
 }
+@media(max-width:640px){
+  section{padding:70px 5%}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .hero-stats{gap:18px}
+  .stat h4{font-size:1.3rem}
+  .stat p{font-size:.65rem}
+  .footer-top{flex-direction:column}
+  .testi-card{width:300px}
+}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<!-- ============== TOP INFO BAR ============== -->
-<div class="topbar">
-  <div class="wrap">
-    <div class="ti">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:0919210777">091-9210777 Ext 7231</a></span>
-      <span class="email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><a href="mailto:dteofschscolls@gmail.com">dteofschscolls@gmail.com</a></span>
+<!-- NAV -->
+<nav>
+  <div class="logo">Farhan<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-dots" id="heroDots"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Available for new projects</div>
+    <h1 class="hero-h">Design that<br><em>speaks.</em> Brands<br>that endure.</h1>
+    <p class="hero-desc">I'm <strong>Farhan Ali Shah</strong> — a seasoned Graphic Designer, Brand Strategist & Web Developer with <strong>15 years</strong> of expertise crafting compelling visual identities and powerful digital experiences.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+      <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's Talk</button>
     </div>
-    <div class="tr">
-      <a class="apply" href="#admissions">Online Admission Form</a>
-      <div class="socials">
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.6l.4-4h-4V6c0-1 .2-1.4 1.2-1.4H18V0h-3.7C10.7 0 9 1.6 9 4.6V8z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.5-5a3 3 0 0 0-2-2C18.7 4.5 12 4.5 12 4.5s-6.7 0-8.5.5a3 3 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.5 5a3 3 0 0 0 2 2c1.8.5 8.5.5 8.5.5s6.7 0 8.5-.5a3 3 0 0 0 2-2c.5-1.5.5-5 .5-5zM10 15.5v-7l6 3.5-6 3.5z"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 22 10.7 22 14v7h-4v-6.2c0-1.48-.03-3.4-2.07-3.4-2.07 0-2.38 1.62-2.38 3.3V21H9V9z"/></svg></a>
+    <div class="hero-stats">
+      <div class="stat"><h4>15<span>+</span></h4><p>Years Experience</p></div>
+      <div class="stat"><h4>500<span>+</span></h4><p>Projects Delivered</p></div>
+      <div class="stat"><h4>200<span>+</span></h4><p>Happy Clients</p></div>
+      <div class="stat"><h4>3<span></span></h4><p>Core Disciplines</p></div>
+    </div>
+  </div>
+
+  <!-- HERO RIGHT IMAGE -->
+  <div class="hero-right">
+    <div class="hero-photo-card">
+      <!-- ✅ TO USE YOUR OWN PHOTO: replace src below -->
+      <img src="images/portfolio1.jpg" alt="Farhan Ali Shah" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="hero-photo-placeholder" style="display:none">
+        <span class="big-icon">🧑‍🎨</span>
+        <span class="ph-name">Farhan Ali Shah</span>
+        <span class="ph-title">Graphic Designer · AI Expert</span>
       </div>
     </div>
+
   </div>
-</div>
+</section>
 
-<!-- ============== HEADER / NAV ============== -->
-<header class="header" id="header">
-  <div class="wrap">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#" aria-label="Fazaia Schools and Colleges home">
-        <!-- LOGO: paste your logo PNG URL inside src="" below. The gradient mark is a fallback shown until then. -->
-        <img class="brand-logo" src="images/fazaia-logo-512.png" alt="Fazaia Schools & Colleges logo">
-        <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l20-9-9 20-2-9-9-2z"/></svg></span>
-        <span class="bt"><b>Fazaia</b><small>Schools &amp; Colleges</small></span>
-      </a>
-
-      <ul class="menu">
-        <li><a href="#why">About Us <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></a>
-          <div class="dd"><a href="#why">Our Story</a><a href="#mvv">Mission &amp; Vision</a><a href="#mvv">Core Values</a><a href="#story">Leadership</a></div>
-        </li>
-        <li><a href="#life">Facilities <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></a>
-          <div class="dd mega"><a href="#life">Smart Classrooms</a><a href="#life">Science Labs</a><a href="#life">Robotics Studio</a><a href="#life">Sports Complex</a><a href="#life">Libraries</a><a href="#life">Arts &amp; Culture</a></div>
-        </li>
-        <li><a href="#journey">Academics <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></a>
-          <div class="dd"><a href="#journey">Junior Section</a><a href="#journey">Senior Section</a><a href="#journey">College Section</a><a href="#journey">CAIE Programmes</a></div>
-        </li>
-        <li><a href="#admissions">Admissions</a></li>
-        <li><a href="#story">Institutional Culture</a></li>
-        <li><a href="#cocur">Services</a></li>
-        <li><a href="#cocur">Co-Curricular</a></li>
-        <li><a href="#network">Campuses</a></li>
-        <li><a href="#alumni">Alumni</a></li>
-      </ul>
-
-      <div class="nav-cta">
-        <a class="btn btn-purple btn-sm" href="#admissions">Apply</a>
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img reveal">
+      <div class="about-img-inner">
+        <img src="images/portfolio2.jpg" alt="Farhan Ali Shah" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </nav>
-  </div>
-</header>
-
-<div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Mobile menu">
-  <button class="dclose" id="dclose" aria-label="Close menu">&times;</button>
-  <nav>
-    <a href="#why">About Us</a><a href="#life">Facilities</a><a href="#journey">Academics</a>
-    <a href="#admissions">Admissions</a><a href="#story">Institutional Culture</a><a href="#cocur">Services</a>
-    <a href="#cocur">Co-Curricular Activities</a><a href="#network">Campuses</a><a href="#alumni">Alumni</a>
-  </nav>
-  <div class="dctas"><a class="btn btn-purple" href="#admissions">Apply for Admission</a></div>
-</aside>
-
-<!-- ============== HERO ============== -->
-<section class="hero" id="home">
-  <div class="hero-bg" id="heroBg">
-    <!-- IMG: Hero slide 1 -->
-    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80')"></div>
-    <!-- IMG: Hero slide 2 -->
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80')"></div>
-    <!-- IMG: Hero slide 3 -->
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1920&q=80')"></div>
-  </div>
-  <svg class="hero-arc" viewBox="0 0 560 560" fill="none">
-    <circle cx="280" cy="280" r="240" stroke="rgba(245,185,66,.35)" stroke-width="1.5"/>
-    <circle cx="280" cy="280" r="180" stroke="rgba(74,163,255,.3)" stroke-width="1.5" stroke-dasharray="4 8"/>
-    <path d="M60 470 Q280 60 500 280" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="500" cy="280" r="7" fill="var(--gold)"/>
-  </svg>
-  <div class="wrap">
-    <div class="hero-inner reveal in">
-      <span class="eyebrow light"><span class="arc"></span>Western Education with Eastern Values</span>
-      <h1>Aspiring for <span class="hl">Excellence</span></h1>
-      <p class="hero-sub">Explore an engaging learning environment that nurtures critical thinking, character development, leadership, and academic excellence — for every child, on every campus.</p>
-      <div class="hero-tag"><span class="dot"></span>Shaping Pakistan's future leaders since the 1970s</div>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#admissions">Apply Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="#journey">Explore Programs</a>
+      <div class="about-tag2">
+        <div class="num">AI</div>
+        <div class="lbl">Powered</div>
+      </div>
+      <div class="about-tag">
+        <div class="num">15<span style="color:var(--accent2)">+</span></div>
+        <div class="lbl">Years Mastery</div>
+      </div>
+    </div>
+    <div class="about-content reveal">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Creative vision meets <em style="font-style:italic;color:var(--accent2)">technical</em> excellence</h2>
+      <p>I'm <strong>Farhan Ali Shah</strong>, a multi-disciplinary creative professional with over 15 years of hands-on experience in graphic design, brand building, and web development. My work spans logo design, brand identity, print media — from flyers and brochures to magazines and banners — right through to fully functional websites.</p>
+      <p>I combine traditional design expertise with cutting-edge AI tools to deliver faster, smarter, and more innovative results for my clients. Whether you need a stunning brand identity, a high-converting website, or AI-enhanced creative work, I bring the full spectrum of skills to the table.</p>
+      <div class="about-values">
+        <span class="chip">Logo Design</span>
+        <span class="chip">Brand Identity</span>
+        <span class="chip">Flyers & Brochures</span>
+        <span class="chip">Magazines</span>
+        <span class="chip">Banners</span>
+        <span class="chip">Social Media Graphics</span>
+        <span class="chip">WordPress</span>
+        <span class="chip">HTML & CSS</span>
+        <span class="chip">AI Design</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- trust counters -->
-<div class="trust">
-  <div class="wrap">
-    <div class="ti reveal"><div class="num"><span data-count="26">0</span></div><div class="lbl">Campuses</div></div>
-    <div class="ti reveal d1"><div class="num"><span data-count="60000">0</span><span class="plus">+</span></div><div class="lbl">Students</div></div>
-    <div class="ti reveal d2"><div class="num"><span data-count="5000">0</span><span class="plus">+</span></div><div class="lbl">Faculty Members</div></div>
-    <div class="ti reveal d3"><div class="num"><span data-count="50">0</span><span class="plus">+</span></div><div class="lbl">Years of Excellence</div></div>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="reveal">
+    <div class="section-label">Expertise</div>
+    <h2 class="section-title">Skills & proficiency</h2>
+    <p class="section-sub">15 years of refining craft across design, development, and emerging AI technologies.</p>
   </div>
-</div>
-
-<!-- ============== WHY FAZAIA ============== -->
-<section class="section why" id="why">
-  <div class="wrap why-grid">
-    <div class="collage reveal">
-      <!-- IMG: Why-Fazaia collage 1 -->
-      <figure style="background-image:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80')"></figure>
-      <!-- IMG: Why-Fazaia collage 2 -->
-      <figure style="background-image:url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80')"></figure>
-      <!-- IMG: Why-Fazaia collage 3 -->
-      <figure style="background-image:url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=600&q=80')"></figure>
-      <!-- IMG: Why-Fazaia collage 4 -->
-      <figure style="background-image:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80')"></figure>
-      <div class="badge"><div class="n">A+</div><p>A nationwide standard of academic discipline, character and care — held consistently across all 26 Fazaia campuses.</p></div>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">🎨</div>
+      <h4>Graphic Design</h4>
+      <div class="skill-bar"><div class="skill-fill" data-w="98"></div></div>
+      <div class="skill-meta"><span>Logo, Print, Branding</span><span>98%</span></div>
     </div>
-    <div class="why-copy reveal d1">
-      <span class="eyebrow"><span class="arc"></span>Why Fazaia</span>
-      <h2 class="section-head" style="margin-bottom:0;font-size:clamp(2rem,4.2vw,3rem);font-weight:700">Where credentials meet character.</h2>
-      <p class="why-quote">"Soar with us to new heights of academic excellence and personality development — aspiring national development."</p>
-      <div class="pillars">
-        <div class="pillar"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><div><h4>Academic Excellence</h4><p>A rigorous, future-ready curriculum that rewards understanding over memorisation.</p></div></div>
-        <div class="pillar"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><h4>Character Building</h4><p>Integrity, discipline and respect woven into everyday school life.</p></div></div>
-        <div class="pillar"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M5 9l2 4M19 9l-2 4"/><circle cx="12" cy="16" r="5"/></svg></span><div><h4>Leadership Development</h4><p>Students lead clubs, councils and service projects from an early age.</p></div></div>
-        <div class="pillar"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V18h6v-1.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg></span><div><h4>Innovation</h4><p>STEM, robotics and design thinking that prepare children for what's next.</p></div></div>
-        <div class="pillar"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V5l9-3 9 3v16M9 21v-6h6v6"/></svg></span><div><h4>Patriotism</h4><p>A deep sense of national pride and responsibility toward Pakistan.</p></div></div>
-        <div class="pillar"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><div><h4>Holistic Growth</h4><p>Academics, athletics and the arts developed in balance, together.</p></div></div>
-      </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🏷️</div>
+      <h4>Brand Identity & Strategy</h4>
+      <div class="skill-bar"><div class="skill-fill" data-w="96"></div></div>
+      <div class="skill-meta"><span>Visual Systems, Guidelines</span><span>96%</span></div>
     </div>
-  </div>
-</section>
-
-<!-- ============== MISSION / VISION / VALUES ============== -->
-<section class="section" id="mvv">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow"><span class="arc"></span>Our Foundation</span>
-      <h2>Mission, Vision &amp; the values we live by</h2>
-      <p>Three commitments that shape how every Fazaian thinks, learns and leads.</p>
+    <div class="skill-card reveal">
+      <div class="skill-icon">📄</div>
+      <h4>Print & Publication Design</h4>
+      <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+      <div class="skill-meta"><span>Brochures, Magazines, Flyers</span><span>95%</span></div>
     </div>
-    <div class="mvv-grid">
-      <article class="mvv m1 reveal"><span class="glow"></span>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-        <span class="tag">Mission</span><h3>Teach how to think</h3>
-        <p>To groom how-to-think students grounded in strong values — curious minds with the character to use them well.</p>
-      </article>
-      <article class="mvv m2 reveal d1"><span class="glow"></span>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <span class="tag">Vision</span><h3>A respected national chain</h3>
-        <p>To be amongst the most respected chains of schools and colleges in Pakistan — a name parents trust for life.</p>
-      </article>
-      <article class="mvv m3 reveal d2"><span class="glow"></span>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/></svg></div>
-        <span class="tag">Core Values</span><h3>Integrity in action</h3>
-        <p>The principles every campus is measured against, every single day.</p>
-        <div class="vals"><span>Integrity</span><span>Cognition</span><span>Application</span></div>
-      </article>
+    <div class="skill-card reveal">
+      <div class="skill-icon">📱</div>
+      <h4>Social Media Design</h4>
+      <div class="skill-bar"><div class="skill-fill" data-w="97"></div></div>
+      <div class="skill-meta"><span>Banners, Posts, Campaigns</span><span>97%</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🌐</div>
+      <h4>Web Development</h4>
+      <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+      <div class="skill-meta"><span>HTML, CSS, WordPress</span><span>88%</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🤖</div>
+      <h4>AI Design & Creativity</h4>
+      <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+      <div class="skill-meta"><span>Midjourney, Firefly, GPT</span><span>90%</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============== ACADEMIC JOURNEY ============== -->
-<section class="section journey" id="journey">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow"><span class="arc"></span>Academic Journey</span>
-      <h2>A pathway to quality education</h2>
-      <p>From a child's earliest years to internationally recognised qualifications — a continuous climb, stage by stage.</p>
-    </div>
-    <div class="path">
-      <div class="stage reveal"><div class="node"><b>01</b></div>
-        <div class="stage-card"><!-- IMG: Junior Section -->
-          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80')"></div>
-          <div class="body"><h3>Junior Section</h3><p>Promoting joyful learning, developing critical thinking and inculcating values from a tender age.</p>
-            <a class="link-arrow" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        </div>
-      </div>
-      <div class="stage reveal d1"><div class="node"><b>02</b></div>
-        <div class="stage-card"><!-- IMG: Senior Section -->
-          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80')"></div>
-          <div class="body"><h3>Senior Section</h3><p>Imparting quality education and grooming wholesome personalities ready for the next challenge.</p>
-            <a class="link-arrow" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        </div>
-      </div>
-      <div class="stage reveal d2"><div class="node"><b>03</b></div>
-        <div class="stage-card"><!-- IMG: College Section -->
-          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80')"></div>
-          <div class="body"><h3>College Section</h3><p>Providing a sound academic foundation for futuristic professional undertakings and higher study.</p>
-            <a class="link-arrow" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        </div>
-      </div>
-      <div class="stage reveal d3"><div class="node"><b>04</b></div>
-        <div class="stage-card"><!-- IMG: CAIE Programmes -->
-          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=600&q=80')"></div>
-          <div class="body"><h3>CAIE Programmes</h3><p>Imparting internationally recognised education for success in a rapidly changing world.</p>
-            <a class="link-arrow" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== STUDENT LIFE ============== -->
-<section class="section" id="life">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="arc"></span>Student Life &amp; Campus Experience</span>
-      <h2>More than a classroom — a community</h2>
-      <p>Spaces and programmes designed so every interest finds room to grow.</p>
-    </div>
-    <div class="life-grid">
-      <!-- IMG: Smart Classrooms -->
-      <div class="life reveal" style="background-image:url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80')"><div class="lc"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><h4>Smart Classrooms</h4><p>Interactive, technology-enabled learning.</p></div></div>
-      <!-- IMG: Science Labs -->
-      <div class="life reveal d1" style="background-image:url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80')"><div class="lc"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6L4 18a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L15 8V2"/><path d="M8 2h8"/></svg></span><h4>Science Labs</h4><p>Hands-on discovery in physics, chemistry, biology.</p></div></div>
-      <!-- IMG: Robotics & STEM -->
-      <div class="life reveal d2" style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80')"><div class="lc"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16h.01M16 16h.01"/></svg></span><h4>Robotics &amp; STEM</h4><p>Building, coding and competing.</p></div></div>
-      <!-- IMG: Sports Facilities -->
-      <div class="life reveal d3" style="background-image:url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80')"><div class="lc"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></span><h4>Sports Facilities</h4><p>Fields and coaching that build teamwork.</p></div></div>
-      <!-- IMG: Libraries -->
-      <div class="life reveal" style="background-image:url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80')"><div class="lc"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><h4>Libraries</h4><p>Quiet rooms and rich collections.</p></div></div>
-      <!-- IMG: Arts & Culture -->
-      <div class="life reveal d1" style="background-image:url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80')"><div class="lc"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 8l7-5 7 5"/><circle cx="12" cy="14" r="3"/></svg></span><h4>Arts &amp; Culture</h4><p>Music, drama and visual art.</p></div></div>
-      <!-- IMG: Leadership Programs -->
-      <div class="life reveal d2" style="background-image:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80')"><div class="lc"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/></svg></span><h4>Leadership Programs</h4><p>Councils, mentoring and responsibility.</p></div></div>
-      <!-- IMG: Community Service -->
-      <div class="life reveal d3" style="background-image:url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=600&q=80')"><div class="lc"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-3-3.87M4 21v-2a4 4 0 0 1 3-3.87M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></span><h4>Community Service</h4><p>Empathy put into action.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== VALUES STORYTELLING ============== -->
-<section class="story" id="story">
-  <!-- IMG: Values storytelling background -->
-  <div class="story-bg" style="background-image:url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1920&q=80')"></div>
-  <div class="wrap">
-    <div class="story-inner reveal">
-      <span class="eyebrow light"><span class="arc"></span>Institutional Culture</span>
-      <h2>Values-based quality education for nation building</h2>
-      <p>At Fazaia, knowledge and character are never separate. We raise young people who think independently, act with integrity, and carry a quiet sense of duty to their country — the kind of leaders Pakistan is counting on.</p>
-      <button class="play" id="playBtn" aria-label="Play video"><span class="pbtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="pt"><b>Watch our story</b><small>Inside a Fazaia campus</small></span></button>
-    </div>
-  </div>
-</section>
-
-<!-- Video modal (opens in its own window) -->
-<div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="Fazaia video">
-  <div class="vbox">
-    <button class="vclose" id="vclose" aria-label="Close video">&times;</button>
-    <div class="vempty" id="vempty"><b>Add your video link</b><span>Open the file and set <code>VIDEO_URL</code> in the script to your YouTube/Vimeo/MP4 link.</span></div>
-    <div id="vmount"></div>
-  </div>
-</div>
-
-<!-- ============== ACCREDITATIONS ============== -->
-<section class="section accred" id="accred">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow"><span class="arc"></span>Achievements &amp; Accreditations</span>
-      <h2>Recognised by institutions that set the standard</h2>
-      <p>Our programmes are aligned with leading national and international academic bodies.</p>
-    </div>
-    <div class="logo-row">
-      <div class="logo-card reveal"><span class="lm">British<span class="ac">·</span></span><small>British Council</small></div>
-      <div class="logo-card reveal d1"><span class="lm">CAIE</span><small>Cambridge Assessment</small></div>
-      <div class="logo-card reveal d2"><span class="lm">Air<span class="ac">·</span>U</span><small>Air University</small></div>
-      <div class="logo-card reveal d3"><span class="lm">FBISE</span><small>Federal Board</small></div>
-      <div class="logo-card reveal d1"><span class="lm">UOP</span><small>University of Peshawar</small></div>
-      <div class="logo-card reveal d2"><span class="lm">NUST</span><small>Nat. Univ. of Sciences &amp; Technology</small></div>
-      <div class="logo-card reveal d3"><span class="lm">Bahria</span><small>Bahria University</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== CAMPUS NETWORK ============== -->
-<section class="section" id="network">
-  <div class="wrap">
-    <div class="network-grid">
-      <div class="reveal">
-        <div class="net-figure">
-          <div class="grid-bg"></div>
-          <!-- NETWORK MAP IMAGE: paste your map image URL inside src="" below -->
-          <img id="netImg" src="" alt="Fazaia campus network map">
-          <div class="net-placeholder" id="netPlaceholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <b>Campus network map</b>
-            <span>Paste your map image link in <code>#netImg src</code></span>
-          </div>
-        </div>
-      </div>
-      <div class="reveal d1">
-        <span class="eyebrow"><span class="arc"></span>Campus Network</span>
-        <h2 class="section-head" style="margin-bottom:14px;font-size:clamp(2rem,4.2vw,3rem);font-weight:700">26 campuses. One standard of excellence.</h2>
-        <div class="net-total"><span class="nt">26</span><p>Fazaia Schools &amp; Colleges operating across Pakistan — every campus held to the same disciplined, values-driven standard.</p></div>
-        <div class="region-chips">
-          <div class="rchip"><span class="rn">North Region</span><span class="rc">08</span></div>
-          <div class="rchip"><span class="rn">South Region</span><span class="rc">07</span></div>
-          <div class="rchip"><span class="rn">Central Region</span><span class="rc">07</span></div>
-          <div class="rchip"><span class="rn">Federal Region</span><span class="rc">04</span></div>
-        </div>
-        <!-- GOOGLE MAP: this link opens Google Maps and shows the nearest Fazaia institutions to the visitor. Replace the query if needed. -->
-        <a class="btn btn-purple" href="https://www.google.com/maps/search/?api=1&query=Fazaia+School+College" target="_blank" rel="noopener">Find your nearest campus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== TESTIMONIALS (auto marquee) ============== -->
-<section class="section testi" id="testi">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="arc"></span>Success Stories</span>
-      <h2>Voices from the Fazaia family</h2>
-      <p>Students, parents and alumni on what makes this community different.</p>
-    </div>
-  </div>
-  <div class="testi-marquee" id="testiMarquee" tabindex="0" aria-label="Success stories, auto-scrolling; hover or focus to pause">
-    <div class="testi-track" id="testiTrack">
-      <!-- 10 stories; duplicated in JS for a seamless right-to-left loop -->
-    </div>
-  </div>
-  <p class="testi-hint">Hover to pause · stories scroll automatically</p>
-</section>
-
-<!-- ============== NEWS & EVENTS ============== -->
-<section class="section" id="news">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="arc"></span>News &amp; Events</span>
-      <h2>Happening across Fazaia</h2>
-      <p>From model UN debates to adventure camps and international podiums.</p>
-    </div>
-    <div class="news-grid">
-      <!-- IMG: Featured news -->
-      <a class="feature reveal" href="#" style="background-image:url('https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=1000&q=80')">
-        <div class="fc"><span class="cat">Featured</span><h3>Fazaia Model United Nations (FMUN)</h3><p>Hundreds of young delegates debated global challenges with diplomacy, research and conviction at this year's flagship FMUN.</p></div>
-      </a>
-      <div class="news-side">
-        <!-- IMG: Adventure camp -->
-        <a class="ncard reveal d1" href="#"><div class="ni" style="background-image:url('https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=400&q=80')"></div><div class="nb"><span class="cat">Outdoor</span><h4>Adventure-Based Camping Programs</h4><small>Building resilience in the mountains</small></div></a>
-        <!-- IMG: Sailing (replace with your own; this is a sailing/regatta placeholder) -->
-        <a class="ncard reveal d2" href="#"><div class="ni" style="background-image:url('https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=400&q=80')"></div><div class="nb"><span class="cat">Maritime</span><h4>Sailing Orientation Courses</h4><small>Discipline and teamwork on the water</small></div></a>
-        <!-- IMG: International achievements (replace with your own; achievement/graduation placeholder) -->
-        <a class="ncard reveal d3" href="#"><div class="ni" style="background-image:url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=400&q=80')"></div><div class="nb"><span class="cat">Global</span><h4>International Competition Achievements</h4><small>Fazaians on the world stage</small></div></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== CO-CURRICULAR ============== -->
-<section class="section cocur" id="cocur">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow"><span class="arc"></span>Co-Curricular Excellence</span>
-      <h2>Talent grows beyond the timetable</h2>
-      <p>Every Fazaian is encouraged to discover a passion and pursue it seriously.</p>
-    </div>
-    <div class="cocur-grid">
-      <div class="cc reveal"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.9 7 22l5-3 5 3-1.2-8.1"/></svg></div><h4>Sports</h4><p>Athletics, cricket, football and more — competing with pride.</p></div>
-      <div class="cc reveal d1"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-5v12L3 14v-3zM11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div><h4>Debates</h4><p>Sharpening argument, evidence and confident public speaking.</p></div>
-      <div class="cc reveal d2"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div><h4>STEM</h4><p>Curiosity-led science, technology and mathematics challenges.</p></div>
-      <div class="cc reveal d3"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M9 16h.01M15 16h.01"/></svg></div><h4>Robotics</h4><p>Designing and coding machines that solve real problems.</p></div>
-      <div class="cc reveal"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="11.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 22a4 4 0 0 0 4-4c0-2-1-3-2-3H10c-1 0-2 1-2 3a4 4 0 0 0 4 4z"/></svg></div><h4>Arts</h4><p>Visual art, music and drama that give imagination a stage.</p></div>
-      <div class="cc reveal d1"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/></svg></div><h4>Leadership</h4><p>Student councils and mentoring that build real responsibility.</p></div>
-      <div class="cc reveal d2"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-3-3.87M4 21v-2a4 4 0 0 1 3-3.87M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></div><h4>Community Engagement</h4><p>Service projects that connect students with society.</p></div>
-      <div class="cc reveal d3"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>Adventure</h4><p>Camps and expeditions that test courage and character.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== ADMISSIONS CTA ============== -->
-<section class="adm" id="admissions">
-  <!-- IMG: Admissions background -->
-  <div class="adm-bg" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80')"></div>
-  <div class="wrap">
-    <span class="badge2 reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Admissions Open · Session 2026–27</span>
-    <h2 class="reveal d1">Begin your child's journey toward excellence</h2>
-    <p class="reveal d2">Secure a place at Pakistan's premier values-driven school network. Limited seats per campus.</p>
-    <div class="ctas reveal d3">
-      <a class="btn btn-primary" href="#">Apply Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost" href="#">Download Prospectus</a>
-      <a class="btn btn-ghost" href="#network">Find Campus</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============== ALUMNI IMPACT ============== -->
-<section class="section alumni" id="alumni">
-  <div class="wrap ia-grid">
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-intro">
     <div class="reveal">
-      <span class="eyebrow"><span class="arc"></span>Alumni &amp; National Impact</span>
-      <h2 class="section-head" style="margin-bottom:14px;font-size:clamp(2rem,4.2vw,3rem);font-weight:700">Fazaians are building Pakistan.</h2>
-      <p style="color:var(--muted)">Across five decades, our graduates have stepped into the fields that move a nation forward — leading, serving and creating with the values they learned here.</p>
-      <div class="fields">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/></svg>Armed Forces</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 7l-3 9M9 5l-3 9M19 5l-3 9M4 19h16"/></svg>Engineering</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A3.5 3.5 0 0 0 12 7 3.5 3.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7 7-7z"/></svg>Medicine</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Business</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Technology</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg>Public Service</span>
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Services I provide</h2>
+    </div>
+    <p class="section-sub reveal">From print to pixels, branding to AI — complete creative solutions under one roof.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-icon">🎨</span>
+      <span class="service-num">01</span>
+      <h3>Graphic Design</h3>
+      <p>Logos, flyers, pamphlets, brochures, magazines, banners, and social media graphics — crafted with precision and purpose using industry-leading tools.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🏷️</span>
+      <span class="service-num">02</span>
+      <h3>Branding & Identity</h3>
+      <p>Complete brand systems that tell your story — logo design, colour palettes, typography, brand guidelines, and visual identity across all touchpoints.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🌐</span>
+      <span class="service-num">03</span>
+      <h3>Web Development</h3>
+      <p>Responsive, modern websites built with HTML, CSS, and WordPress. Clean code, fast performance, and designs that convert visitors into clients.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🤖</span>
+      <span class="service-num">04</span>
+      <h3>AI Graphic Design</h3>
+      <p>AI-powered visuals that push creative boundaries. Concept art, image generation, and AI-enhanced design work that is faster and more innovative.</p>
+      <span class="service-ai-badge">✦ AI Powered</span>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">⚡</span>
+      <span class="service-num">05</span>
+      <h3>AI Web Development</h3>
+      <p>Leveraging AI tools to build smarter websites — faster development cycles, AI-generated content integration, and intelligent UI components.</p>
+      <span class="service-ai-badge">✦ AI Powered</span>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🧠</span>
+      <span class="service-num">06</span>
+      <h3>AI Expertise & Consulting</h3>
+      <p>Helping businesses integrate AI into their creative workflows — tool selection, prompt engineering, AI content strategy, and team training.</p>
+      <span class="service-ai-badge">✦ AI Powered</span>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="reveal">
+    <div class="section-label">My Toolkit</div>
+    <h2 class="section-title">Tools I master</h2>
+    <p class="section-sub">Industry-standard software combined with cutting-edge AI platforms for complete creative power.</p>
+  </div>
+  <div class="tools-grid">
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/coreldraw-icon.png" alt="CorelDRAW Icon" width="25" height="25"></span></div>
+      <h4>CorelDRAW</h4>
+      <span>Vector Design</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/adobe-photoshop-icon.png" alt="Photoshop Icon" width="25" height="25"></span></div>
+      <h4>Photoshop</h4>
+      <span>Photo Editing</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/adobe-illustrator-icon.png" alt="Illustrator Icon" width="25" height="25"></span></div>
+      <h4>Illustrator</h4>
+      <span>Vector Art</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/canva-icon.png" alt="Canva Icon" width="25" height="25"></span></div>
+      <h4>Canva</h4>
+      <span>Quick Design</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/wordpress.png" alt="WordPress Icon" width="25" height="25"></span></div>
+      <h4>WordPress</h4>
+      <span>CMS Development</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/html-css-icon.png" alt="HTML CSS Icon" width="35" height="35"></span></div>
+      <h4>HTML & CSS</h4>
+      <span>Web Coding</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/midjourney.png" alt="Midjourney Icon" width="25" height="25"></span></div>
+      <h4>Midjourney</h4>
+      <span>AI Image Gen</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/adobe-firefly.png" alt="Adobe Firefly Icon" width="25" height="25"></span></div>
+      <h4>Adobe Firefly</h4>
+      <span>AI Creative</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/chatgpt.png" alt="ChatGPT Icon" width="16" height="16"></span></div>
+      <h4>ChatGPT</h4>
+      <span>AI Workflows</span>
+    </div>
+    <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon"><img src="images/claude.png" alt="Claude Icon" width="25" height="25"></span></div>
+      <h4>Claude</h4>
+      <span>AI Workflows</span>
+    </div>
+       <div class="tool-card reveal">
+      <div class="tool-icon-wrap"><span class="tool-icon">
+        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="25" height="25">
+  <path fill="url(#geminiGradient)" d="M12 2a1 1 0 0 0-1 1 9 9 0 0 1-8 8 1 1 0 0 0 0 2 9 9 0 0 1 8 8 1 1 0 0 0 2 0 9 9 0 0 1 8-8 1 1 0 0 0 0-2 9 9 0 0 1-8-8 1 1 0 0 0-1-1Z"/>
+  <defs>
+    <!-- Google Gemini Brand Gradient -->
+    <linearGradient id="geminiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9bc5ff" />
+      <stop offset="50%" stop-color="#2b66ff" />
+      <stop offset="100%" stop-color="#ff8ebb" />
+    </linearGradient>
+  </defs>
+</svg>
+
+      </span></div>
+      <h4>Gemini</h4>
+      <span>AI Workflows</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="background:var(--bg2)">
+  <div class="reveal">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Selected work</h2>
+    <p class="section-sub">A curated showcase across graphic design, branding, web, and AI-powered projects.</p>
+  </div>
+  <div class="projects-filter reveal">
+    <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+    <button class="filter-btn" onclick="filterProjects('branding',this)">Branding</button>
+    <button class="filter-btn" onclick="filterProjects('print',this)">Print</button>
+    <button class="filter-btn" onclick="filterProjects('web',this)">Web</button>
+    <button class="filter-btn" onclick="filterProjects('ai',this)">AI Projects</button>
+  </div>
+  <div class="projects-grid" id="projectsGrid">
+    <div class="project-card reveal" data-cat="branding">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#e0e0ff,#c7c2ff)">🏷️</div>
+      <div class="project-info">
+        <div class="project-tag">Branding · Logo Design</div>
+        <h3>TechNova Brand Identity</h3>
+        <p>Complete brand identity for a tech startup — logo, colour system, typography, and brand guidelines.</p>
+        <div class="project-tech"><span class="tech-pill">Illustrator</span><span class="tech-pill">CorelDRAW</span><span class="tech-pill">Brand Guide</span></div>
       </div>
     </div>
-    <div class="impact-stats reveal d1">
-      <div class="istat"><div class="n"><span data-count="120000">0</span><span class="plus">+</span></div><div class="l">Alumni nationwide</div></div>
-      <div class="istat"><div class="n"><span data-count="50">0</span><span class="plus">+</span></div><div class="l">Years of graduates</div></div>
-      <div class="istat"><div class="n"><span data-count="6">0</span></div><div class="l">Core fields of impact</div></div>
-      <div class="istat"><div class="n"><span data-count="98">0</span><span class="plus">%</span></div><div class="l">Progress to higher study</div></div>
+    <div class="project-card reveal" data-cat="print">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#fce4ec,#f8bbd9)">📰</div>
+      <div class="project-info">
+        <div class="project-tag">Print · Magazine</div>
+        <h3>Lifestyle Magazine Issue</h3>
+        <p>Full 48-page magazine layout with editorial typography, photo treatments, and print-ready output.</p>
+        <div class="project-tech"><span class="tech-pill">CorelDRAW</span><span class="tech-pill">Photoshop</span><span class="tech-pill">Print</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="web">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#d4f1e4,#a8e6c8)">🌐</div>
+      <div class="project-info">
+        <div class="project-tag">Web · WordPress</div>
+        <h3>Restaurant Website</h3>
+        <p>Responsive WordPress website for a premium dining brand with custom theme and booking integration.</p>
+        <div class="project-tech"><span class="tech-pill">WordPress</span><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="ai">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#f3e5f5,#ce93d8)">🤖</div>
+      <div class="project-info">
+        <div class="project-tag">AI Design · Campaign</div>
+        <h3>AI Fashion Campaign</h3>
+        <p>AI-generated fashion visuals for a clothing brand's social media campaign, with prompt engineering and post-editing.</p>
+        <div class="project-tech"><span class="tech-pill">Midjourney</span><span class="tech-pill">Firefly</span><span class="tech-pill">Photoshop</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="print">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#ffecd2,#fcb69f)">📄</div>
+      <div class="project-info">
+        <div class="project-tag">Print · Corporate</div>
+        <h3>Corporate Brochure Suite</h3>
+        <p>Tri-fold and bi-fold brochures for a real estate firm — premium print finishes and compelling layout.</p>
+        <div class="project-tech"><span class="tech-pill">CorelDRAW</span><span class="tech-pill">Illustrator</span><span class="tech-pill">Print Ready</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="ai">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#e3f2fd,#90caf9)">⚡</div>
+      <div class="project-info">
+        <div class="project-tag">AI Web · Development</div>
+        <h3>AI-Enhanced Business Site</h3>
+        <p>WordPress site with AI-generated content, chatbot integration, and smart design components for a consultancy.</p>
+        <div class="project-tech"><span class="tech-pill">WordPress</span><span class="tech-pill">ChatGPT API</span><span class="tech-pill">CSS</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============== FINAL CTA ============== -->
-<section class="final">
-  <div class="wrap">
-    <span class="eyebrow light reveal" style="justify-content:center"><span class="arc"></span>Your child's future starts here</span>
-    <h2 class="reveal d1" style="margin-top:18px">Dream. Believe. <span class="g">Achieve.</span></h2>
-    <p class="reveal d2">Join a learning community that inspires excellence, leadership, and lifelong success.</p>
-    <div class="ctas reveal d3">
-      <a class="btn btn-primary" href="#admissions">Apply Today <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost" href="#">Contact Admissions</a>
-    </div>
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="reveal">
+    <div class="section-label">Testimonials</div>
+    <h2 class="section-title">What clients say</h2>
+    <p class="section-sub">15 years of client relationships built on quality, reliability, and results. Hover to pause.</p>
   </div>
-</section>
-
-<!-- ============== FOOTER ============== -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a class="brand" href="#" aria-label="Fazaia home">
-          <!-- LOGO: paste your logo PNG URL inside src="" below -->
-          <img class="brand-logo" src="images/fazaia-logo-512.png" alt="Fazaia Schools & Colleges logo">
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l20-9-9 20-2-9-9-2z"/></svg></span>
-          <span class="bt"><b>Fazaia</b><small>Schools &amp; Colleges</small></span>
-        </a>
-        <p class="foot-about">Western Education with Eastern Values. A nationwide network shaping Pakistan's future leaders through academic excellence and character building.</p>
-        <div class="foot-social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.6l.4-4h-4V6c0-1 .2-1.4 1.2-1.4H18V0h-3.7C10.7 0 9 1.6 9 4.6V8z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.5-5a3 3 0 0 0-2-2C18.7 4.5 12 4.5 12 4.5s-6.7 0-8.5.5a3 3 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.5 5a3 3 0 0 0 2 2c1.8.5 8.5.5 8.5.5s6.7 0 8.5-.5a3 3 0 0 0 2-2c.5-1.5.5-5 .5-5zM10 15.5v-7l6 3.5-6 3.5z"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 22 10.7 22 14v7h-4v-6.2c0-1.48-.03-3.4-2.07-3.4-2.07 0-2.38 1.62-2.38 3.3V21H9V9z"/></svg></a>
+  <div class="testi-marquee-wrap">
+    <div class="testi-track" id="testiTrack">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Farhan designed our entire brand from scratch — logo, brochures, social media kit. The quality was exceptional and he delivered everything ahead of schedule."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">👨‍💼</div>
+          <div><h5>Ahmed Raza</h5><span>CEO, NovaTech Solutions</span></div>
         </div>
       </div>
-      <div class="fcol">
-        <h5>About Fazaia</h5>
-        <a href="#why">Our Story</a><a href="#mvv">Mission &amp; Vision</a><a href="#mvv">Core Values</a><a href="#story">Institutional Culture</a><a href="#alumni">Alumni</a>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Our WordPress website exceeded every expectation. Clean design, fast load times, and Farhan guided us through every step. Truly professional service."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">👩‍💼</div>
+          <div><h5>Sana Malik</h5><span>Owner, Bloom Boutique</span></div>
+        </div>
       </div>
-      <div class="fcol">
-        <h5>Academics</h5>
-        <a href="#journey">Junior Section</a><a href="#journey">Senior Section</a><a href="#journey">College Section</a><a href="#journey">CAIE Programmes</a><a href="#life">Facilities</a>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The AI-powered campaign visuals Farhan created for us stopped the scroll. Engagement went up 3x. He clearly understands both design and modern AI tools."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">🧑‍💻</div>
+          <div><h5>Bilal Khan</h5><span>Marketing Head, StyleCo</span></div>
+        </div>
       </div>
-      <div class="fcol">
-        <h5>Quick Links</h5>
-        <a href="#admissions">Admissions</a><a href="#network">Campuses</a><a href="#cocur">Co-Curricular</a><a href="#news">News &amp; Events</a><a href="#">Prospectus</a>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Our magazine has never looked better. Farhan's layout skills and print knowledge are unmatched. He's been our go-to designer for 5 years and counting."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">👩‍🎨</div>
+          <div><h5>Nadia Hussain</h5><span>Editor, Urban Living Magazine</span></div>
+        </div>
       </div>
-      <div class="fcol news-col">
-        <h5>Stay Connected</h5>
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><a href="mailto:dteofschscolls@gmail.com">dteofschscolls@gmail.com</a></div>
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:0919210777">091-9210777 Ext 7231</a></div>
-        <form class="news-form" onsubmit="return false">
-          <input type="email" placeholder="Your email" aria-label="Email for newsletter" required>
-          <button type="submit">Join</button>
-        </form>
+      <!-- duplicate set for seamless loop -->
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Farhan designed our entire brand from scratch — logo, brochures, social media kit. The quality was exceptional and he delivered everything ahead of schedule."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">👨‍💼</div>
+          <div><h5>Ahmed Raza</h5><span>CEO, NovaTech Solutions</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Our WordPress website exceeded every expectation. Clean design, fast load times, and Farhan guided us through every step. Truly professional service."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">👩‍💼</div>
+          <div><h5>Sana Malik</h5><span>Owner, Bloom Boutique</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The AI-powered campaign visuals Farhan created for us stopped the scroll. Engagement went up 3x. He clearly understands both design and modern AI tools."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">🧑‍💻</div>
+          <div><h5>Bilal Khan</h5><span>Marketing Head, StyleCo</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Our magazine has never looked better. Farhan's layout skills and print knowledge are unmatched. He's been our go-to designer for 5 years and counting."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">👩‍🎨</div>
+          <div><h5>Nadia Hussain</h5><span>Editor, Urban Living Magazine</span></div>
+        </div>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 Fazaia Schools &amp; Colleges. All rights reserved.</span>
-      <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a> · <a href="#admissions">Admissions</a></span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--bg2)">
+  <div class="reveal">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Let's create together</h2>
+    <p class="section-sub">Have a project in mind? I'd love to hear about it. Let's build something great.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="reveal">
+      <h3>Ready to bring your vision to life?</h3>
+      <p>Whether it's a brand identity, a print campaign, a new website, or an AI-powered creative project — I have the skills and experience to make it exceptional.</p>
+      <br>
+      <div class="contact-item">
+        <div class="contact-item-icon"><img src="images/gmail-icon.png" alt="Email" width="25" height="25"></div>
+        <div class="contact-item-text"><h5>Email</h5><span>gdfashah@gmail.com</span></div>
+      </div>
+            <div class="contact-item">
+        <div class="contact-item-icon"><img src="images/whatsapp-business-icon.png" alt="Whatsapp" width="25" hight="25"></div>
+        <div class="contact-item-text"><h5>Whatsapp</h5><span>+92 333 9268848</span></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div class="contact-item-text"><h5>Location</h5><span>Pakistan (Remote & Local available)</span></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">⏰</div>
+        <div class="contact-item-text"><h5>Response Time</h5><span>Within 24 hours</span></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🟢</div>
+        <div class="contact-item-text"><h5>Status</h5><span>Open to new projects</span></div>
+      </div>
     </div>
+    <div class="contact-form reveal">
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Your name"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Your surname"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option>Graphic Design</option>
+          <option>Logo & Branding</option>
+          <option>Print Design (Flyer/Brochure/Magazine)</option>
+          <option>Social Media Graphics</option>
+          <option>Web Development (HTML/CSS)</option>
+          <option>WordPress Website</option>
+          <option>AI Graphic Design</option>
+          <option>AI Web Development</option>
+          <option>AI Consulting</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project, goals, and timeline…"></textarea></div>
+      <button class="form-submit" onclick="handleSubmit(this)">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Farhan<span>.</span></div>
+      <p class="footer-desc">15+ years of creative excellence in graphic design, branding, web development, and AI-powered innovation.</p>
+      <div class="social-links">
+        <a class="social-link" href="https://www.linkedin.com/in/farhanalishah" title="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
+        <a class="social-link" href="https://www.facebook.com/gdfarhanalishah" title="Facebook"><img src="images/facebook.png" alt="Facebook" width="25" height="25"></a>
+        <a class="social-link" href="#" title="Instagram"><img src="images/instagram.png" alt="Instagram" width="25" height="25"></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Graphic Design</a></li>
+        <li><a href="#">Brand Identity</a></li>
+        <li><a href="#">Print Design</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">AI Design</a></li>
+        <li><a href="#">AI Consulting</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="#">CorelDRAW</a></li>
+        <li><a href="#">Photoshop</a></li>
+        <li><a href="#">Illustrator</a></li>
+        <li><a href="#">WordPress</a></li>
+        <li><a href="#">Midjourney</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Farhan Ali Shah. All rights reserved.</p>
+    <p>Designed with passion ✦ Powered by expertise</p>
   </div>
 </footer>
 
-<!-- sticky mobile CTA + back to top -->
-<div class="mobile-cta">
-  <a class="btn btn-purple" href="#admissions">Apply</a>
-  <a class="btn btn-ghost-dark" href="#network">Find Campus</a>
-</div>
-<button class="totop" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
 <script>
-/* ====== set this to play the values video in its own window ====== */
-const VIDEO_URL = ""; // e.g. "https://www.youtube.com/embed/XXXX" or a direct .mp4 link
+// Hero dots
+const dotGrid=document.getElementById('heroDots');
+for(let i=0;i<64;i++){const s=document.createElement('span');dotGrid.appendChild(s)}
 
-/* header shadow */
-const header=document.getElementById('header');
-addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20),{passive:true});
+// Scroll reveal + skill bar animation
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('.skill-fill').forEach(f=>{
+        setTimeout(()=>{f.style.width=f.dataset.w+'%'},150);
+      });
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-/* logo fallback handling */
-document.querySelectorAll('.brand-logo').forEach(img=>{
-  const mark=img.parentElement.querySelector('.mark');
-  const show=()=>{img.style.display='block';if(mark)mark.style.display='none';};
-  const hide=()=>{img.style.display='none';if(mark)mark.style.display='grid';};
-  if(!img.getAttribute('src')){hide();}
-  img.addEventListener('load',show); img.addEventListener('error',hide);
+// Project filter
+function filterProjects(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card=>{
+    const show=cat==='all'||card.dataset.cat===cat;
+    card.style.opacity=show?'1':'0.22';
+    card.style.transform=show?'':'scale(.97)';
+    card.style.pointerEvents=show?'auto':'none';
+    card.style.transition='opacity .4s,transform .4s';
+  });
+}
+
+// Form submit
+function handleSubmit(btn){
+  btn.textContent='Sending…';
+  btn.style.background='var(--accent3)';
+  setTimeout(()=>{
+    btn.textContent='✓ Message Sent!';
+    btn.style.background='#16a34a';
+    setTimeout(()=>{btn.textContent='Send Message →';btn.style.background=''},3000);
+  },1500);
+}
+
+// Nav shadow on scroll
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.boxShadow=
+    window.scrollY>20?'0 4px 30px rgba(0,0,0,.07)':'none';
 });
-
-/* drawer */
-const burger=document.getElementById('burger'),drawer=document.getElementById('drawer'),
-      scrim=document.getElementById('scrim'),dclose=document.getElementById('dclose');
-const openMenu=()=>{drawer.classList.add('open');scrim.classList.add('open');burger.classList.add('open');burger.setAttribute('aria-expanded','true')};
-const closeMenu=()=>{drawer.classList.remove('open');scrim.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false')};
-burger.addEventListener('click',openMenu);dclose.addEventListener('click',closeMenu);scrim.addEventListener('click',closeMenu);
-drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-
-/* reveal */
-const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-const obsAll=()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
-obsAll();
-
-/* counters */
-function fmt(n){return n>=1000?n.toLocaleString('en-US'):n}
-const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
-  if(!e.isIntersecting)return;cio.unobserve(e.target);
-  const el=e.target,target=+el.dataset.count,dur=1600,t0=performance.now();
-  function step(now){let p=Math.min((now-t0)/dur,1);p=1-Math.pow(1-p,3);
-    el.textContent=fmt(Math.floor(target*p));if(p<1)requestAnimationFrame(step);else el.textContent=fmt(target);}
-  requestAnimationFrame(step);
-})},{threshold:.5});
-document.querySelectorAll('[data-count]').forEach(c=>cio.observe(c));
-
-/* hero slider */
-const slides=document.querySelectorAll('.hero-slide');let hi=0;
-if(slides.length>1)setInterval(()=>{slides[hi].classList.remove('active');hi=(hi+1)%slides.length;slides[hi].classList.add('active')},5500);
-
-/* network map image */
-const netImg=document.getElementById('netImg'),netPh=document.getElementById('netPlaceholder');
-if(!netImg.getAttribute('src')){netImg.style.display='none';}
-netImg.addEventListener('load',()=>{netImg.style.display='block';netPh.style.display='none';});
-netImg.addEventListener('error',()=>{netImg.style.display='none';netPh.style.display='grid';});
-
-/* ===== testimonials: 10 stories, seamless right→left marquee ===== */
-const stories=[
-  {q:"Fazaia taught my daughter to think for herself and to lead with kindness. She walked into university already confident and grounded.",n:"Ayesha Khan",r:"Parent · Peshawar",a:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80"},
-  {q:"The robotics lab changed everything for me. I represented Pakistan at an international STEM competition — it started in a Fazaia classroom.",n:"Hamza Tariq",r:"Student · A-Levels",a:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"},
-  {q:"Discipline, respect, ambition — Fazaia shaped who I am. I now serve in the Armed Forces, and I carry those values every day.",n:"Bilal Ahmed",r:"Alumnus · Class of 2014",a:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"},
-  {q:"What I love is the balance — strong academics, but also debating, sports and service. My son is genuinely excited to go to school.",n:"Sana Mahmood",r:"Parent · Lahore",a:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"},
-  {q:"My teachers pushed me to aim higher than I thought possible. I'm now studying medicine on a full scholarship.",n:"Fatima Noor",r:"Alumna · Class of 2019",a:"https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=200&q=80"},
-  {q:"From the Federal region to the South, the standard is the same. We moved cities and our children never missed a beat.",n:"Imran Saleem",r:"Parent · Karachi",a:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80"},
-  {q:"The adventure camps taught me resilience I use in engineering school today. Fazaia builds character, not just grades.",n:"Zara Iqbal",r:"Alumna · NUST",a:"https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80"},
-  {q:"Caring teachers who know every child by name. That personal attention is rare, and it's why we chose Fazaia.",n:"Nadia Pervaiz",r:"Parent · Islamabad",a:"https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&q=80"},
-  {q:"Debating at FMUN gave me a voice. I went from shy to confident, and today I lead a startup team.",n:"Usman Raza",r:"Alumnus · Entrepreneur",a:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80"},
-  {q:"Values first, always. My daughter learned honesty and hard work here — the rest followed naturally.",n:"Hina Aslam",r:"Parent · Faisalabad",a:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"}
-];
-const track=document.getElementById('testiTrack');
-function card(s){
-  return `<article class="tcard"><div class="quote">&ldquo;</div><p>${s.q}</p>
-    <div class="who"><span class="av" style="background-image:url('${s.a}')"></span>
-    <div><b>${s.n}</b><small>${s.r}</small></div></div></article>`;
-}
-track.innerHTML = (stories.map(card).join('')) + (stories.map(card).join('')); // duplicate for seamless loop
-/* slower for many cards; tie duration to count */
-track.style.animationDuration = (stories.length*7.5)+'s';
-
-/* ===== video modal ===== */
-const vmodal=document.getElementById('vmodal'),vmount=document.getElementById('vmount'),
-      vempty=document.getElementById('vempty'),playBtn=document.getElementById('playBtn'),vclose=document.getElementById('vclose');
-function openVideo(){
-  vmodal.classList.add('open');
-  if(VIDEO_URL){
-    vempty.style.display='none';
-    const isFile=/\.(mp4|webm|ogg)(\?|$)/i.test(VIDEO_URL);
-    vmount.innerHTML = isFile
-      ? `<video src="${VIDEO_URL}" controls autoplay playsinline></video>`
-      : `<iframe src="${VIDEO_URL}${VIDEO_URL.includes('?')?'&':'?'}autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-  }
-}
-function closeVideo(){vmodal.classList.remove('open');vmount.innerHTML='';}
-playBtn.addEventListener('click',openVideo);
-vclose.addEventListener('click',closeVideo);
-vmodal.addEventListener('click',e=>{if(e.target===vmodal)closeVideo();});
-addEventListener('keydown',e=>{if(e.key==='Escape')closeVideo();});
-
-/* ===== back to top ===== */
-const toTop=document.getElementById('toTop');
-addEventListener('scroll',()=>toTop.classList.toggle('show',scrollY>500),{passive:true});
-toTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>
 </html>
